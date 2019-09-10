@@ -24,8 +24,8 @@ int main(int argc, char *argv[])
     MessageBox(NULL, "윈속 초기화 성공", "알림", MB_OK);
 
     // socket()
-    SOCKET tcp_sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (tcp_sock == INVALID_SOCKET) err_quit("socket()");
+    SOCKET tcp_sock = socket(AF_BTH, SOCK_STREAM, 0);	// AF_BTH: 블루투스 주소체계, SOCK_STREAM: TCP 소켓
+    if (tcp_sock == INVALID_SOCKET) err_quit("socket()");	// 주소체계와 소켓타입이 맞지않아 오류발생
     MessageBox(NULL, "TCP 소켓 생성 성공", "알림", MB_OK);
 
     // closesocket()

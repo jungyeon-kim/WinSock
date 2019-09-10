@@ -1,5 +1,5 @@
 #define _WINSOCK_DEPRECATED_NO_WARNINGS // 최신 VC++ 컴파일 시 경고 방지
-#pragma comment(lib, "ws2_32")	// 프로젝트 내부에 라이브러리를 추가하는 대신 pragma comment 사용
+#pragma comment(lib, "ws2_32")	// 프로젝트 내부에 라이브러리를 추가하여 include하는 대신 pragma comment 사용
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #include <stdlib.h>

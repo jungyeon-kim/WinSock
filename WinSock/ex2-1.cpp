@@ -19,14 +19,16 @@ int main(int argc, char *argv[])
 {
 	// 윈속 초기화
 	WSADATA wsa;
-	if(WSAStartup(MAKEWORD(2,2), &wsa) != 0)	// MAKEWORD(2,2)버전이 아니면 프로그램 종료
+	if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0)	// MAKEWORD(2,2)버전이 아니면 프로그램 종료
 		return 1;
 	MessageBox(NULL, "윈속 초기화 성공", "알림", MB_OK);
-
+	
 	// socket()
-	SOCKET udp_sock = socket(AF_INET6, SOCK_DGRAM, 0);
-	if(udp_sock == INVALID_SOCKET) err_quit("socket()");
-	MessageBox(NULL, "UDP 소켓(IPv6) 생성 성공", "알림", MB_OK);
+	SOCKET udp_sock = socket(AF_INET, SOCK_DGRAM, 0);	// AF_INET: IPv4 주소체계, SOCK_DGRAM: UDP 소켓
+														// 주소체계와 소켓타입만으로 프로토콜 결정 가능
+														// 따라서, 세번째 인자(프로토콜)는 0(default)
+	if (udp_sock == INVALID_SOCKET) err_quit("socket()");
+	MessageBox(NULL, "UDP 소켓 생성 성공", "알림", MB_OK);
 
 	// closesocket()
 	closesocket(udp_sock);
