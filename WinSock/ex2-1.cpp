@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 {
 	// 윈속 초기화
 	WSADATA wsa;
-	if(WSAStartup(MAKEWORD(2,2), &wsa) != 0)
+	if(WSAStartup(MAKEWORD(2,2), &wsa) != 0)	// MAKEWORD(2,2)버전이 아니면 프로그램 종료
 		return 1;
 	MessageBox(NULL, "윈속 초기화 성공", "알림", MB_OK);
 
