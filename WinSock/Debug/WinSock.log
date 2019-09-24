@@ -1,1 +1,1 @@
-﻿  WinSock.vcxproj -> C:\project\Visual Studio\WinSock\Debug\WinSock.exe
+﻿LINK : fatal error LNK1168: C:\project\Visual Studio\WinSock\Debug\WinSock.exe을(를) 쓰기용으로 열 수 없습니다.
