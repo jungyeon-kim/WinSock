@@ -2,6 +2,8 @@
 4-1 TCP Server 예제
 
 IPv4 기반
+
+cmd에서 netstat -na 명령어로 현재 만들어진 서버를 볼 수 있다.
 *******************************************/
 
 #define _WINSOCK_DEPRECATED_NO_WARNINGS // 최신 VC++ 컴파일 시 경고 방지
