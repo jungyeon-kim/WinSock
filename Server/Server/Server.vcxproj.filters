@@ -14,14 +14,32 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="소스 파일\ex">
-      <UniqueIdentifier>{5cf53b09-7554-4f9a-ad56-49de482bc91a}</UniqueIdentifier>
+      <UniqueIdentifier>{b3799c97-c41c-45d8-a3c3-1b50526a6713}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.TCPClient.cpp">
+    <ClCompile Include="3.ByteOrder.cpp">
       <Filter>소스 파일\ex</Filter>
     </ClCompile>
-    <ClCompile Include="2.TCPClient6.cpp">
+    <ClCompile Include="4.IPAddr.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="5.NameResolution.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="6.TCPServer.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="7.TCPServer6.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="1.socket.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="2.socket.cpp">
       <Filter>소스 파일\ex</Filter>
     </ClCompile>
   </ItemGroup>
