@@ -24,11 +24,11 @@ int main(int argc, char *argv[])
     printf("IPv4 주소(변환 전) = %s\n", ipv4test);
 
     // inet_addr() 함수 연습
-    printf("IPv4 주소(변환 후) = 0x%x\n", inet_addr(ipv4test));
+    printf("IPv4 주소(변환 후) = 0x%x\n", inet_addr(ipv4test));	// 16진수지만 OS가 자체적으로 2진수로 변환
 
     // inet_ntoa() 함수 연습
     IN_ADDR ipv4num;
-    ipv4num.s_addr = inet_addr(ipv4test);
+    ipv4num.s_addr = inet_addr(ipv4test);	// 소켓주소 구조체에 변환된 주소를 대입
     printf("IPv4 주소(다시 변환 후) = %s\n", inet_ntoa(ipv4num));
 
     printf("\n");

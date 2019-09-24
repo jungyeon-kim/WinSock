@@ -36,5 +36,17 @@
     <ClCompile Include="5.NameResolution.cpp">
       <Filter>소스 파일\ex</Filter>
     </ClCompile>
+    <ClCompile Include="6.TCPClient.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="7.TCPClient6.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="8.TCPServer.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="9.TCPServer6.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

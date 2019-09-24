@@ -29,9 +29,6 @@ int main(int argc, char *argv[])
 	u_short x2, x3;
 	u_long  y2, y3;
 
-	int x{ 0x1234 };
-	printf("%x\n", x);
-
 	// 호스트 바이트 -> 네트워크 바이트
 	printf("[호스트 바이트 -> 네트워크 바이트]\n");
 	WSAHtons(s, x1, &x2);
