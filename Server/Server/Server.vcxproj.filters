@@ -51,5 +51,8 @@
     <ClCompile Include="10.TCPServer_FixedVariable.cpp">
       <Filter>소스 파일\ex</Filter>
     </ClCompile>
+    <ClCompile Include="11.TCPServer_Chat.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
