@@ -42,5 +42,8 @@
     <ClCompile Include="2.socket.cpp">
       <Filter>소스 파일\ex</Filter>
     </ClCompile>
+    <ClCompile Include="8.TCPServer_Fixed.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
