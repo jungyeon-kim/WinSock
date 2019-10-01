@@ -27,5 +27,11 @@
     <ClCompile Include="8.TCPClient_Fixed.cpp">
       <Filter>소스 파일\ex</Filter>
     </ClCompile>
+    <ClCompile Include="9.TCPClient_Variable.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
+    <ClCompile Include="10.TCPClient_FixedVariable.cpp">
+      <Filter>소스 파일\ex</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
