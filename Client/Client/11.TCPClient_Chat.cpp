@@ -62,12 +62,12 @@ int recvn(SOCKET s, char *buf, int len, int flags)
 	return (len - left);
 }
 
-int main(int argc, char *argv[])	// (전달받은 인자의 갯수, 전달받은 인자)
+int main(int argc, char *argv[])
 {
 	int retval;
 	char *chatid;
 
-	if(argc != 2){	// 인자의 갯수가 2개가 아니라면
+	if(argc != 2){
 		fprintf(stderr, "Usage: %s <Chatting ID>\n", argv[0]);
 		exit(1);
 	}

@@ -16,25 +16,28 @@
     <Filter Include="소스 파일\ex">
       <UniqueIdentifier>{5cf53b09-7554-4f9a-ad56-49de482bc91a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ex\TCPServer">
+      <UniqueIdentifier>{2f21b78e-31e4-4b63-9817-9740e55e619e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="6.TCPClient.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="7.TCPClient6.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="8.TCPClient_Fixed.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="9.TCPClient_Variable.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="10.TCPClient_FixedVariable.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="11.TCPClient_Chat.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\TCPServer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

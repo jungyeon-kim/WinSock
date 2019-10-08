@@ -16,43 +16,61 @@
     <Filter Include="소스 파일\ex">
       <UniqueIdentifier>{b3799c97-c41c-45d8-a3c3-1b50526a6713}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ex\1.TCPServer">
+      <UniqueIdentifier>{8611077c-af07-46eb-837d-8ecab6c9410e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ex\2.Thread">
+      <UniqueIdentifier>{f83675e8-6a07-47c8-8646-35825fc39226}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="3.ByteOrder.cpp">
-      <Filter>소스 파일\ex</Filter>
-    </ClCompile>
-    <ClCompile Include="4.IPAddr.cpp">
-      <Filter>소스 파일\ex</Filter>
-    </ClCompile>
-    <ClCompile Include="5.NameResolution.cpp">
-      <Filter>소스 파일\ex</Filter>
-    </ClCompile>
     <ClCompile Include="server.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="6.TCPServer.cpp">
-      <Filter>소스 파일\ex</Filter>
-    </ClCompile>
-    <ClCompile Include="7.TCPServer6.cpp">
-      <Filter>소스 파일\ex</Filter>
-    </ClCompile>
     <ClCompile Include="1.socket.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="2.socket.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="3.ByteOrder.cpp">
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="4.IPAddr.cpp">
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="5.NameResolution.cpp">
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="6.TCPServer.cpp">
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="7.TCPServer6.cpp">
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="8.TCPServer_Fixed.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="9.TCPServer_Variable.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="10.TCPServer_FixedVariable.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
     </ClCompile>
     <ClCompile Include="11.TCPServer_Chat.cpp">
-      <Filter>소스 파일\ex</Filter>
+      <Filter>소스 파일\ex\1.TCPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="12.ExThread1.cpp">
+      <Filter>소스 파일\ex\2.Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="13.ExThread2.cpp">
+      <Filter>소스 파일\ex\2.Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="14.ExThread3.cpp">
+      <Filter>소스 파일\ex\2.Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="15.MultithreadTCPServer.cpp">
+      <Filter>소스 파일\ex\2.Thread</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
