@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\ex\2.Thread">
       <UniqueIdentifier>{f83675e8-6a07-47c8-8646-35825fc39226}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ex\3.UDPServer">
+      <UniqueIdentifier>{316d885c-e3ab-4ea8-bdb9-c5f611b4f7c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="server.cpp">
@@ -71,6 +74,15 @@
     </ClCompile>
     <ClCompile Include="15.MultithreadTCPServer.cpp">
       <Filter>소스 파일\ex\2.Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="16.ExCriticalSection.cpp">
+      <Filter>소스 파일\ex\2.Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="17.ExEvent.cpp">
+      <Filter>소스 파일\ex\2.Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="18.UDPServer.cpp">
+      <Filter>소스 파일\ex\3.UDPServer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
