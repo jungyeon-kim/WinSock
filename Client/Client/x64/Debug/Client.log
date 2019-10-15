@@ -1,4 +1,4 @@
-﻿  18.UDPClient.cpp
-C:\project\Visual Studio\WinSock\Client\Client\18.UDPClient.cpp(78,26): warning C4267:  '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\project\Visual Studio\WinSock\Client\Client\18.UDPClient.cpp(86,56): warning C4267:  '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  6.TCPClient.cpp
+C:\project\Visual Studio\WinSock\Client\Client\6.TCPClient.cpp(100,26): warning C4267:  '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\project\Visual Studio\WinSock\Client\Client\6.TCPClient.cpp(107,48): warning C4267:  '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Client.vcxproj -> C:\project\Visual Studio\WinSock\Client\x64\Debug\Client.exe
