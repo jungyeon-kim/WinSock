@@ -3,6 +3,13 @@
 
 
 가변 길이 데이터 전송 - 서버 모듈
+
+송신자는 가변 길이 데이터를 보내고 끝 부분에 특별한 표시(EOR, End Of Record)를
+붙임. 수신자는 EOR이 나올 때까지 데이터를 읽음
+
+생성될 데이터의 길이를 미리 알 수 없을 때 적합
+데이터 중간에 EOR(End Of Record)과 똑같은 패턴(여기선 "\n")이 들어있으면 데이터가 완전히 전송되지 않음
+데이터를 효율적으로 수신하는 방식의 알고리즘이 없으면 성능이 떨어짐 (한바이트씩 읽어들이므로)
 *******************************************************/
 
 #define _WINSOCK_DEPRECATED_NO_WARNINGS // 최신 VC++ 컴파일 시 경고 방지
@@ -74,7 +81,7 @@ int recvline(SOCKET s, char *buf, int maxlen)		// \n이 나올때까지 데이터를 읽기 
         nbytes = _recv_ahead(s, &c);
         if (nbytes == 1) {
             *ptr++ = c;
-            if (c == '\n')
+            if (c == '\n')							// EOR
                 break;
         }
         else if (nbytes == 0) {

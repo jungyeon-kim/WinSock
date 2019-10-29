@@ -41,14 +41,12 @@ void err_display(char *msg)
     LocalFree(lpMsgBuf);
 }
 
-// 사용자 정의 데이터 수신 함수
+// 사용자 정의 데이터 수신 함수 (가변길이의 데이터를 받기 위함)
 int recvn(SOCKET s, char *buf, int len, int flags)
 {
     int received;
     char *ptr = buf;
     int left = len;
-
-
 
     while (left > 0) {
         received = recv(s, ptr, left, flags);
@@ -76,7 +74,7 @@ int main(int argc, char *argv[])
     SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == INVALID_SOCKET) err_quit("socket()");
 
-    // connect() -> 서버와 연결설정
+    // connect() -> IP, Port번호 할당, 서버에 연결요청
     SOCKADDR_IN serveraddr;
     ZeroMemory(&serveraddr, sizeof(serveraddr));
     serveraddr.sin_family = AF_INET;

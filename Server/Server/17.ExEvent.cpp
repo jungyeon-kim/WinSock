@@ -2,6 +2,10 @@
 실습 6-6
 
 CS Event 실습
+
+사건 발생(어떤 스레드의 작업 완료)을 알려(신호) 대기상태(비신호)인 다른 스레드를 깨움 -> 이벤트간 순서 보장
+자동 리셋 이벤트:		이벤트가 신호 상태가 되면, 대기상태 스레드 "하나"를 깨우고 비신호 상태가 됨.
+수동 리셋 이벤트:		이벤트가 신호 상태가 되면, 대기상태 스레드 "모두"를 깨우고 비신호 상태가 됨.
 **************************************/
 
 #include <windows.h>
@@ -23,6 +27,7 @@ DWORD WINAPI WriteThread(LPVOID arg)
         if (retval != WAIT_OBJECT_0) break;
 
         // 공유 버퍼에 데이터 저장
+		printf("Thread %4d: \n", GetCurrentThreadId());
         for (int i = 0; i < BUFSIZE; i++)
             buf[i] = k;
 
@@ -61,9 +66,9 @@ DWORD WINAPI ReadThread(LPVOID arg)
 int main(int argc, char *argv[])
 {
     // 두 개의 자동 리셋 이벤트 생성(각각 비신호, 신호 상태)
-    hWriteEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
+    hWriteEvent = CreateEvent(NULL, FALSE, FALSE, NULL);	// NULL, 자동리셋, 비신호, NULL
     if (hWriteEvent == NULL) return 1;
-    hReadEvent = CreateEvent(NULL, FALSE, TRUE, NULL);
+    hReadEvent = CreateEvent(NULL, FALSE, TRUE, NULL);		// NULL, 자동리셋, 신호, NULL
     if (hReadEvent == NULL) return 1;
 
     // 세 개의 스레드 생성
@@ -78,5 +83,6 @@ int main(int argc, char *argv[])
     // 이벤트 제거
     CloseHandle(hWriteEvent);
     CloseHandle(hReadEvent);
+
     return 0;
 }
