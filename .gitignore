@@ -1,0 +1,13 @@
+*.suo
+*.db
+*.db-shm
+*.db-wal
+*.obj
+*.idb
+*.pdb
+*.exe
+*.ilk
+*.log
+*.pch
+*.tlog
+*.ipch
