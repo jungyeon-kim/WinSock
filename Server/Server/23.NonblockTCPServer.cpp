@@ -1,15 +1,9 @@
-/******************************************
-4-1 TCP Server 예제
+/**********************************
+예제 10-1 
 
-IPv4 기반
-
-연결형 프로토콜
-오류제어, 흐름제어 지원 -> 신뢰성 있는 데이터 전송
-UDP보다 성능은 떨어짐
-
-기본적으로 통신(일대일 대응)을 하기위한 소켓 하나, 대기를 하기위한 소켓 하나 총 두개가 존재.
-일대다 통신을 위해서 멀티스레딩 기법 필요.
-*******************************************/
+논블록 예제. 
+ioctlsocket() 함수 사용 간단 예제
+***********************************/
 
 #define _WINSOCK_DEPRECATED_NO_WARNINGS // 최신 VC++ 컴파일 시 경고 방지
 #pragma comment(lib, "ws2_32")
@@ -56,11 +50,16 @@ int main(int argc, char *argv[])
     if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0)
         return 1;
 
-    // socket() -> 소켓 생성
+    // socket()
     SOCKET listen_sock = socket(AF_INET, SOCK_STREAM, 0);
     if (listen_sock == INVALID_SOCKET) err_quit("socket()");
 
-    // bind() -> 지역 IP / port 번호 결정
+    // 넌블로킹 소켓으로 전환
+    u_long on = 1;
+    retval = ioctlsocket(listen_sock, FIONBIO, &on);
+    if (retval == SOCKET_ERROR) err_quit("ioctlsocket()");
+
+    // bind()
     SOCKADDR_IN serveraddr;
     ZeroMemory(&serveraddr, sizeof(serveraddr));
     serveraddr.sin_family = AF_INET;
@@ -69,7 +68,7 @@ int main(int argc, char *argv[])
     retval = bind(listen_sock, (SOCKADDR *)&serveraddr, sizeof(serveraddr));
     if (retval == SOCKET_ERROR) err_quit("bind()");
 
-    // listen() -> 대기상태
+    // listen()
     retval = listen(listen_sock, SOMAXCONN);
     if (retval == SOCKET_ERROR) err_quit("listen()");
 
@@ -80,10 +79,13 @@ int main(int argc, char *argv[])
     char buf[BUFSIZE + 1];
 
     while (1) {
-        // accept() -> 접속한 클라이언트와 통신 가능하도록 새로운 소켓을 만들어 리턴
+        // accept()
+    ACCEPT_AGAIN:
         addrlen = sizeof(clientaddr);
         client_sock = accept(listen_sock, (SOCKADDR *)&clientaddr, &addrlen);
         if (client_sock == INVALID_SOCKET) {
+            if (WSAGetLastError() == WSAEWOULDBLOCK)
+                goto ACCEPT_AGAIN;
             err_display("accept()");
             break;
         }
@@ -95,8 +97,11 @@ int main(int argc, char *argv[])
         // 클라이언트와 데이터 통신
         while (1) {
             // 데이터 받기
+        RECEIVE_AGAIN:
             retval = recv(client_sock, buf, BUFSIZE, 0);
             if (retval == SOCKET_ERROR) {
+                if (WSAGetLastError() == WSAEWOULDBLOCK)
+                    goto RECEIVE_AGAIN;
                 err_display("recv()");
                 break;
             }
@@ -105,12 +110,15 @@ int main(int argc, char *argv[])
 
             // 받은 데이터 출력
             buf[retval] = '\0';
-            printf("[TCP/%s:%d] %s\n", inet_ntoa(clientaddr.sin_addr),	// IP주소변환
-                ntohs(clientaddr.sin_port), buf);						// 바이트정렬
+            printf("[TCP/%s:%d] %s\n", inet_ntoa(clientaddr.sin_addr),
+                ntohs(clientaddr.sin_port), buf);
 
             // 데이터 보내기
+        SEND_AGAIN:
             retval = send(client_sock, buf, retval, 0);
             if (retval == SOCKET_ERROR) {
+                if (WSAGetLastError() == WSAEWOULDBLOCK)
+                    goto SEND_AGAIN;
                 err_display("send()");
                 break;
             }

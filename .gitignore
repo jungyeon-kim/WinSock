@@ -1,13 +1,49 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Customs
 *.suo
 *.db
 *.db-shm
 *.db-wal
-*.obj
 *.idb
+*.iobj
 *.pdb
-*.exe
+*.ipdb
 *.ilk
 *.log
-*.pch
 *.tlog
+*.res
 *.ipch
+*.opendb
+*.vcxproj.FileListAbsolute.txt

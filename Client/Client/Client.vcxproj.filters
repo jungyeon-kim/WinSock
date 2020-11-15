@@ -45,10 +45,13 @@
     <ClCompile Include="18.UDPClient.cpp">
       <Filter>소스 파일\ex\2.UDPServer</Filter>
     </ClCompile>
+    <ClCompile Include="21.MulticastReceiver.cpp">
+      <Filter>소스 파일\ex\2.UDPServer</Filter>
+    </ClCompile>
     <ClCompile Include="19.UDPClient_connect.cpp">
       <Filter>소스 파일\ex\2.UDPServer</Filter>
     </ClCompile>
-    <ClCompile Include="20.MulticastReceiver.cpp">
+    <ClCompile Include="20.BroadcastReceiver.cpp">
       <Filter>소스 파일\ex\2.UDPServer</Filter>
     </ClCompile>
   </ItemGroup>

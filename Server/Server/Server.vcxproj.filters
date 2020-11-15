@@ -22,8 +22,14 @@
     <Filter Include="소스 파일\ex\2.Thread">
       <UniqueIdentifier>{f83675e8-6a07-47c8-8646-35825fc39226}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\ex\3.UDPServer">
+    <Filter Include="소스 파일\ex\3.SocketOption">
+      <UniqueIdentifier>{3de27f6e-f705-4842-b8eb-5b1651488efc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ex\4.UDPServer">
       <UniqueIdentifier>{316d885c-e3ab-4ea8-bdb9-c5f611b4f7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ex\5.SocketModel">
+      <UniqueIdentifier>{dcf4db16-3faa-482b-9bd9-e9478181509b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -82,10 +88,28 @@
       <Filter>소스 파일\ex\2.Thread</Filter>
     </ClCompile>
     <ClCompile Include="18.UDPServer.cpp">
-      <Filter>소스 파일\ex\3.UDPServer</Filter>
+      <Filter>소스 파일\ex\4.UDPServer</Filter>
     </ClCompile>
-    <ClCompile Include="20.MulticastSender.cpp">
-      <Filter>소스 파일\ex\3.UDPServer</Filter>
+    <ClCompile Include="21.MulticastSender.cpp">
+      <Filter>소스 파일\ex\4.UDPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="20.BroadcastSender.cpp">
+      <Filter>소스 파일\ex\4.UDPServer</Filter>
+    </ClCompile>
+    <ClCompile Include="22.buffer.cpp">
+      <Filter>소스 파일\ex\3.SocketOption</Filter>
+    </ClCompile>
+    <ClCompile Include="23.NonblockTCPServer.cpp">
+      <Filter>소스 파일\ex\5.SocketModel</Filter>
+    </ClCompile>
+    <ClCompile Include="24.SelectTCPServer.cpp">
+      <Filter>소스 파일\ex\5.SocketModel</Filter>
+    </ClCompile>
+    <ClCompile Include="25.AsyncSelectTCPServer.cpp">
+      <Filter>소스 파일\ex\5.SocketModel</Filter>
+    </ClCompile>
+    <ClCompile Include="26.EventSelectTCPServer.cpp">
+      <Filter>소스 파일\ex\5.SocketModel</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
